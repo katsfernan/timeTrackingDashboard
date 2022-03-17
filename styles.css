@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+:root{
+
+--rubik: 'Rubik', 'sans serif';
+
+--blue: hsl(246, 80%, 60%);
+
+/* work */
+--light-orange: hsl(15, 100%, 70%);
+/* play */
+--soft-blue: hsl(195, 74%, 62%);
+/* study */
+--light-red : hsl(348, 100%, 68%);
+/* exercise */
+--lime-green : hsl(145, 58%, 55%);
+/* social */
+--violet: hsl(264, 64%, 52%);
+/* self care */
+--soft-orange : hsl(43, 84%, 65%);
+
+--very-dark-blue: hsl(226, 43%, 10%);
+--dark-blue: hsl(235, 46%, 20%);
+--desaturated-blue: hsl(235, 45%, 61%);
+--pale-blue: hsl(236, 100%, 87%);
+
+--card-main-top : rgb(87,70,234); 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    font-family: var(--rubik);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container .main-card {
+    background-color: var(--dark-blue);
+    border-radius: 1rem;
+    
+}
+
+.container .main-card .card-top h2 {
+    font-size: 11px;
+    color: var(--pale-blue);
+}
+
+
+.container .main-card .card-top{
+    color: white;
+    font-size: 9px;
+    background-color: var(--card-main-top);
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    min-width: 250px;
+    min-height: 110px;
+    border-radius: 1.25rem;
+}
+
+.container .main-card .card-top img {
+    border-radius: 50%;
+    border: 3px solid #fdfbfb;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+}
+
+.container .main-card .card-bottom {
+    padding: 1.125rem 1.25rem;
+}
+
+.container .main-card .card-bottom ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--desaturated-blue);
+    list-style-type: none;
+}
+
+.container .main-card .card-bottom li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.container .task-card {
+    background-color: var(--light-orange);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 1.5rem;
+    
+
+}
+
+.container .task-card .top-img {
+    display: flex;
+    justify-content: end;
+}
+
+.container .task-card img {
+    margin-right: .75rem;
+    width: 20%;
+    opacity: 120%;
+}
+
+.container .task-card .task-card-bottom {
+    border-radius: 1.25rem;
+    background-color: var(--dark-blue);
+    font-size: 7px;
+    color: white;
+    padding: 1.75rem;
+
+}
+
+.container .task-card .task-card-bottom .card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: .75rem;
+    
+}
+
+.container .task-card .task-card-bottom .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .task-card .task-card-bottom .card-content h1 {
+    font-size: 18px;
+}
+
+.container .task-card .task-card-bottom .card-title img {
+    width: 20%;
+    height: 20%;
+}
+
+.menu-active {
+    font-weight: bold;
+    color: white;
+}
+
+
+#work {
+    background-color: var(--light-orange);
+}
+
+#play {
+    background-color: var(--soft-blue);
+}
+
+#study {
+    background-color: var(--light-red);
+}
+
+#exercise {
+    background-color: var(--lime-green);
+}
+
+#social {
+    background-color: var(--violet);
+}
+
+#selfcare {
+    background-color: var(--soft-orange);
+}
+
+@media(min-width:1440px){
+
+    body {
+        height: 100vh;
+        
+    }
+
+    .container {
+        display: grid;
+        width: 77%;
+        grid-template-columns: 23% 23% 23% 23%;
+        gap: 3rem;
+        
+    }
+
+    .main-card{
+        grid-row: 1 / span 2;
+        /* grid-column: unset;          */
+    }
+
+    .card-top{ 
+        flex-direction: column !important;  
+        align-items: flex-start !important;
+        height: 70%;
+    }
+
+    .card-top img{
+        margin: 2rem 2.5rem;
+        width: 5rem !important;
+        height: 5rem !important;
+
+    }
+
+    .main-card-info {
+        margin-left: 2rem;
+    }
+
+
+}
+
